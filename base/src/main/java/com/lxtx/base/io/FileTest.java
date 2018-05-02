@@ -1,9 +1,6 @@
 package com.lxtx.base.io;
 
-import org.apache.commons.io.FileUtils;
-
 import java.io.File;
-import java.io.IOException;
 import java.util.Calendar;
 
 /**
@@ -30,16 +27,17 @@ public class FileTest {
 
                 }else{
                     System.out.println(file.getName());
-                    try {
-                        long time = file.lastModified();
-                        if(time<deadLine){
-                            System.out.println("文件最后更新时间超过七天，后台强制删除。");
-                            // 当前时间-7天，如果超过七天，文件删除
+                    long time = file.lastModified();
+                    if(time<deadLine){
+                        System.out.println("文件最后更新时间超过七天，后台强制删除。");
+                        // 当前时间-7天，如果超过七天，文件删除
+                        file.delete();
+                        // jvm 退出的时候才删除文件，也就是程序执行完再删除文件，不建议使用
+                        /*try {
                             FileUtils.forceDeleteOnExit(file);
-                        }
-
-                    } catch (IOException e) {
-                        e.printStackTrace();
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }*/
                     }
                 }
 
