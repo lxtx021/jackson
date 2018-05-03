@@ -6,6 +6,10 @@ import java.util.List;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
+/**
+ * 压缩 解压缩的方法
+ * @author jackson
+ */
 public class ZipUtils {
     private static final int  BUFFER_SIZE = 2 * 1024;
 
