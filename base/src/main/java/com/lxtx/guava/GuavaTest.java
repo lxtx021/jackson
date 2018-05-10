@@ -1,11 +1,6 @@
 package com.lxtx.guava;
 
 import com.google.common.base.Optional;
-import com.google.common.collect.Multiset;
-
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.Set;
 
 /**
  * @author jackson
