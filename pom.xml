@@ -14,6 +14,8 @@
 		<module>controller</module>
 		<module>rabbitmq.consumer</module>
 		<module>rabbitmq.producer</module>
+        <module>kafka.consumer</module>
+		<module>kafka.producer</module>
 	</modules>
 	<packaging>pom</packaging>
 
@@ -142,6 +144,11 @@
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpclient</artifactId>
 			<version>4.5.5</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.8.2</version>
 		</dependency>
 	</dependencies>
 
