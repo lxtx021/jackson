@@ -1,7 +1,7 @@
 package com.lxtx.rabbitmq;
 
 /**
- * @author 孙洪波
+ * @author jackson
  * @version 1.0  2018/7/2
  */
 public class Test {

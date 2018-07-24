@@ -6,7 +6,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * ConcurrentHashMap  test
- * @author 孙洪波
+ * @author jackson
  * @version 1.0  2018/6/1
  */
 public class ConcurrentHashMapTest {

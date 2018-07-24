@@ -7,7 +7,7 @@ import org.apache.commons.httpclient.methods.GetMethod;
 import java.io.IOException;
 
 /**
- * @author 孙洪波
+ * @author jackson
  * @version 1.0  2018/6/4
  */
 public class SimpleClient {

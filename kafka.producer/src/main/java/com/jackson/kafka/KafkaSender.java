@@ -11,7 +11,7 @@ import java.util.Date;
 import java.util.UUID;
 
 /**
- * @author 孙洪波
+ * @author jackson
  * @version 1.0  2018/6/7
  */
 @Component
