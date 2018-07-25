@@ -16,6 +16,7 @@
 		<module>rabbitmq.producer</module>
         <module>kafka.consumer</module>
 		<module>kafka.producer</module>
+		<module>eureka.server</module>
 	</modules>
 	<packaging>pom</packaging>
 
@@ -25,7 +26,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.0.1.RELEASE</version>
+		<version>2.0.3.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
