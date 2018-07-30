@@ -12,11 +12,10 @@ public class MultiThread {
 	private int num = 0;
 	
 	/** static */
-	public synchronized void printNum(String tag){
+	public  synchronized  void printNum(String tag){
 		try {
 			
 			if(tag.equals("a")){
-				num = 100;
 				System.out.println("tag a, set num over!");
 				Thread.sleep(1000);
 			} else {
