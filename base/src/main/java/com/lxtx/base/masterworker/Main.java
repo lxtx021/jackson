@@ -5,6 +5,9 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 
 /**
  * Master  Worker 并行计算
+ * 多个线程同时执行，通过Master 记录每个子线程的执行结果，状态
+ * 在主线程中统一返回result
+ * @author jackson
  */
 public class Main {
 

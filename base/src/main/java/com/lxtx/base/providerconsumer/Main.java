@@ -5,6 +5,12 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.LinkedBlockingQueue;
 
+/**
+ * 生产者 消费者模式
+ * 通过多个生产者调用多个消费者
+ * 主流的MQ Message Queue 模式
+ * @author jackson
+ */
 public class Main {
 
 	public static void main(String[] args) throws Exception {
