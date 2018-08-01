@@ -4,7 +4,11 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;  
 import java.util.concurrent.Semaphore;  
   
-public class UseSemaphore {  
+/**
+ * 信号量的case
+ * @author jackson
+ */
+public class UseSemaphore {
   
     public static void main(String[] args) {  
         // 线程池  
