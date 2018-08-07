@@ -5,6 +5,7 @@ import java.rmi.registry.LocateRegistry;
 import java.rmi.server.RMISocketFactory;
 
 /**
+ * RMI BIO(同步阻塞) 实现Socket  性能低
  * @author jackson
  */
 public class ServerMain {
