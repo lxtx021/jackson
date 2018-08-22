@@ -12,7 +12,7 @@
 		<module>rabbitmq.producer</module>
         <module>kafka.consumer</module>
 		<module>kafka.producer</module>
-		<module>eureka.server</module>
+		<module>eureka.server</module><module>mongodb</module>
 	</modules>
 	<packaging>pom</packaging>
 
