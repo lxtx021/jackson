@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("mongodb")
-@Api("mongodb測試")
+@Api("mongodb测试")
 public class MongoUserController {
 
     private final MongoUserService service;

@@ -62,7 +62,7 @@ public class MongoUserServiceImpl implements MongoUserService {
 
         Long a =Calendar.getInstance().getTimeInMillis();
         System.out.println("数据组织时间 start:"+a);
-        for (int i = 20000; i <= 99999; i++) {
+        for (int i = 100000; i <= 200000; i++) {
             MongoUser user =new MongoUser();
             user.setId(i);
             user.setEmail("email"+i);
@@ -71,7 +71,7 @@ public class MongoUserServiceImpl implements MongoUserService {
             user.setSalt("salt");
             user.setValidateCode("ValidateCode"+i);
             user.setGender(i%2);
-            user.setPhone(Integer.toUnsignedLong(100000+i));
+            user.setPhone(Integer.toUnsignedLong(1000000+i));
             user.setImgUrl("imgUrl"+i);
             user.setAddress("address"+i);
             user.setRegisterTime(Calendar.getInstance().getTimeInMillis());
