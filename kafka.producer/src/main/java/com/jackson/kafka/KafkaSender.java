@@ -30,6 +30,9 @@ public class KafkaSender {
         message.setMsg(UUID.randomUUID().toString());
         message.setSendTime(new Date());
         log.info("+++++++++++++++++++++  message = {}", gson.toJson(message));
-        kafkaTemplate.send("zhisheng", gson.toJson(message));
+        /**
+         * 向test topic 中发送消息
+         */
+        kafkaTemplate.send("test", gson.toJson(message));
     }
 }
