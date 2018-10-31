@@ -24,5 +24,6 @@ public class FileNameTest {
         String title = "？\\*{}[]%2&#.pdf";
        String str =  title.replaceAll("[\\( \\) \\ \\/ : \\? \\* < > \\| \"]", "-").replaceAll("[-]+", "");//匹配 非法pdf文件名字符
         System.out.println(str);
+
     }
 }
