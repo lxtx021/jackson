@@ -26,6 +26,7 @@ public class EasyExcelTest {
                     System.out.println(bean.getName());
                 }
 
+
             }
         } catch (IOException e) {
             e.printStackTrace();
