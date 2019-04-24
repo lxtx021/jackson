@@ -25,5 +25,7 @@ public class ListTest2 {
         // 读写锁
         // 使用 ReentrantReadWriteLock ,同时维护一对锁：读锁和写锁。当写线程访问时则其他所有锁都将阻塞，读线程访问时则不会。通过读写锁的分离可以很大程度的提高并发量和吞吐量。
         ReentrantReadWriteLock rrwLock =new ReentrantReadWriteLock();
+
+        // 测试 lock
     }
 }
