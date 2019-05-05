@@ -14,6 +14,7 @@
 		<module>kafka.producer</module>
 		<module>eureka.server</module>
 		<module>mongodb</module>
+		<module>springboot1</module>
 	</modules>
 	<packaging>pom</packaging>
 
