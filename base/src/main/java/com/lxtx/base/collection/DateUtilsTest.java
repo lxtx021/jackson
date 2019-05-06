@@ -4,6 +4,11 @@ import org.apache.commons.lang.time.DateUtils;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Calendar;
 
 /**
  * 【强制】 SimpleDateFormat 是线程不安全的类，一般不要定义为 static 变量，如果定义为
@@ -27,9 +32,25 @@ public class DateUtilsTest {
             return new SimpleDateFormat("yyyy-MM-dd");
         }
     };
-
-
     public static void main(String[] args) {
+//        System.out.println(LocalDateTime.now().toString());
+
+        DateTimeFormatter formatter=DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        LocalDate date = LocalDate.now();
+        String text = date.format(formatter);
+        System.out.println(text);
+        LocalDate parsedDate = LocalDate.parse(text, formatter);
+        System.out.println(parsedDate.toString());
+
+        System.out.println(Calendar.getInstance().getTimeInMillis());
+
+        System.out.println("--------------------------------------");
+        System.out.println(Instant.EPOCH);
+        System.out.println(Instant.MAX);
+        System.out.println(Instant.MIN);
+        System.out.println(Instant.now());
+
+        System.out.println("--------------------------------------");
 
     }
 }
