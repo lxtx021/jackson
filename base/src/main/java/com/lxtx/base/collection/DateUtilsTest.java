@@ -1,14 +1,13 @@
 package com.lxtx.base.collection;
 
-import org.apache.commons.lang.time.DateUtils;
-
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.time.Instant;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.atomic.AtomicLong;
 
 /**
  * 【强制】 SimpleDateFormat 是线程不安全的类，一般不要定义为 static 变量，如果定义为
@@ -51,6 +50,17 @@ public class DateUtilsTest {
         System.out.println(Instant.now());
 
         System.out.println("--------------------------------------");
+        /**
+         * 【参考】 volatile 解决多线程内存不可见问题。对于一写多读，是可以解决变量同步问题，
+         * 但是如果多写，同样无法解决线程安全问题。如果是 count++操作，使用如下类实现：
+         * AtomicInteger count = new AtomicInteger(); count.addAndGet(1); 如果是 JDK8，推
+         * 荐使用 LongAdder 对象，比 AtomicLong 性能更好（减少乐观锁的重试次数） 。
+         */
+        AtomicInteger count = new AtomicInteger();
+        count.addAndGet(1);
+        System.out.println(count);
+        AtomicLong l =new AtomicLong(20L);
 
+        System.out.println(l);
     }
 }
