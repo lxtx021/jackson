@@ -7,7 +7,6 @@ import java.lang.reflect.Field;
 /**
  * 系统类型工具类
  * @author jackson
- * @version 1.0 2016/05/13
  */
 public class ClassUtil {
 	

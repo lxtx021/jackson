@@ -8,9 +8,8 @@ import java.util.Locale;
 
 
 /**
- * CAAC系统运行环境工具类
+ * 系统运行环境工具类
  * @author jackson
- * @version 1.0  2016年3月25日
  */
 public class EnvironmentUtil {
 	
