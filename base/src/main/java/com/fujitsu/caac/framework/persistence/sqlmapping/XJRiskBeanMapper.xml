@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fujitsu.caac.framework.service.XJRiskBeanMapper">
+  <resultMap id="BaseResultMap" type="com.fujitsu.caac.framework.persistence.bean.XJRiskBean">
+    <id column="ID" jdbcType="VARCHAR" property="id" />
+    <result column="TITLE" jdbcType="VARCHAR" property="title" />
+    <result column="SOURCE_TYPE" jdbcType="VARCHAR" property="sourceType" />
+    <result column="SOURCE_TOPIC" jdbcType="VARCHAR" property="sourceTopic" />
+    <result column="RISK_TYPE" jdbcType="VARCHAR" property="riskType" />
+    <result column="POST_TYPE" jdbcType="VARCHAR" property="postType" />
+    <result column="WORK_FLOW" jdbcType="VARCHAR" property="workFlow" />
+    <result column="REASON_ANALYSIS" jdbcType="VARCHAR" property="reasonAnalysis" />
+    <result column="MANAGE_TYPE" jdbcType="VARCHAR" property="manageType" />
+    <result column="GRADING_STANDARD" jdbcType="VARCHAR" property="gradingStandard" />
+    <result column="TREATMENT_MEASURE" jdbcType="VARCHAR" property="treatmentMeasure" />
+    <result column="RESP_UNIT" jdbcType="VARCHAR" property="respUnit" />
+    <result column="RESOURCE_REQUIREMENTS" jdbcType="VARCHAR" property="resourceRequirements" />
+    <result column="RECTIFICATION_PERIOD" jdbcType="VARCHAR" property="rectificationPeriod" />
+    <result column="IMPLEMENTATION_MEASURES" jdbcType="VARCHAR" property="implementationMeasures" />
+    <result column="STATUS" jdbcType="DECIMAL" property="status" />
+    <result column="CREATOR" jdbcType="CHAR" property="creator" />
+    <result column="CREATION_DATE" jdbcType="TIMESTAMP" property="creationDate" />
+    <result column="MODIFIER" jdbcType="CHAR" property="modifier" />
+    <result column="MODIFY_DATE" jdbcType="TIMESTAMP" property="modifyDate" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    ID, TITLE, SOURCE_TYPE, SOURCE_TOPIC, RISK_TYPE, POST_TYPE, WORK_FLOW, REASON_ANALYSIS, 
+    MANAGE_TYPE, GRADING_STANDARD, TREATMENT_MEASURE, RESP_UNIT, RESOURCE_REQUIREMENTS, 
+    RECTIFICATION_PERIOD, IMPLEMENTATION_MEASURES, STATUS, CREATOR, CREATION_DATE, MODIFIER, 
+    MODIFY_DATE
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from T_XJ_RISK
+    where ID = #{id,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from T_XJ_RISK
+    where ID = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.fujitsu.caac.framework.persistence.bean.XJRiskBean">
+    insert into T_XJ_RISK (ID, TITLE, SOURCE_TYPE, 
+      SOURCE_TOPIC, RISK_TYPE, POST_TYPE, 
+      WORK_FLOW, REASON_ANALYSIS, MANAGE_TYPE, 
+      GRADING_STANDARD, TREATMENT_MEASURE, RESP_UNIT, 
+      RESOURCE_REQUIREMENTS, RECTIFICATION_PERIOD, 
+      IMPLEMENTATION_MEASURES, STATUS, CREATOR, 
+      CREATION_DATE, MODIFIER, MODIFY_DATE
+      )
+    values (#{id,jdbcType=VARCHAR}, #{title,jdbcType=VARCHAR}, #{sourceType,jdbcType=VARCHAR}, 
+      #{sourceTopic,jdbcType=VARCHAR}, #{riskType,jdbcType=VARCHAR}, #{postType,jdbcType=VARCHAR}, 
+      #{workFlow,jdbcType=VARCHAR}, #{reasonAnalysis,jdbcType=VARCHAR}, #{manageType,jdbcType=VARCHAR}, 
+      #{gradingStandard,jdbcType=VARCHAR}, #{treatmentMeasure,jdbcType=VARCHAR}, #{respUnit,jdbcType=VARCHAR}, 
+      #{resourceRequirements,jdbcType=VARCHAR}, #{rectificationPeriod,jdbcType=VARCHAR}, 
+      #{implementationMeasures,jdbcType=VARCHAR}, #{status,jdbcType=DECIMAL}, #{creator,jdbcType=CHAR}, 
+      #{creationDate,jdbcType=TIMESTAMP}, #{modifier,jdbcType=CHAR}, #{modifyDate,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.fujitsu.caac.framework.persistence.bean.XJRiskBean">
+    insert into T_XJ_RISK
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        ID,
+      </if>
+      <if test="title != null">
+        TITLE,
+      </if>
+      <if test="sourceType != null">
+        SOURCE_TYPE,
+      </if>
+      <if test="sourceTopic != null">
+        SOURCE_TOPIC,
+      </if>
+      <if test="riskType != null">
+        RISK_TYPE,
+      </if>
+      <if test="postType != null">
+        POST_TYPE,
+      </if>
+      <if test="workFlow != null">
+        WORK_FLOW,
+      </if>
+      <if test="reasonAnalysis != null">
+        REASON_ANALYSIS,
+      </if>
+      <if test="manageType != null">
+        MANAGE_TYPE,
+      </if>
+      <if test="gradingStandard != null">
+        GRADING_STANDARD,
+      </if>
+      <if test="treatmentMeasure != null">
+        TREATMENT_MEASURE,
+      </if>
+      <if test="respUnit != null">
+        RESP_UNIT,
+      </if>
+      <if test="resourceRequirements != null">
+        RESOURCE_REQUIREMENTS,
+      </if>
+      <if test="rectificationPeriod != null">
+        RECTIFICATION_PERIOD,
+      </if>
+      <if test="implementationMeasures != null">
+        IMPLEMENTATION_MEASURES,
+      </if>
+      <if test="status != null">
+        STATUS,
+      </if>
+      <if test="creator != null">
+        CREATOR,
+      </if>
+      <if test="creationDate != null">
+        CREATION_DATE,
+      </if>
+      <if test="modifier != null">
+        MODIFIER,
+      </if>
+      <if test="modifyDate != null">
+        MODIFY_DATE,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="title != null">
+        #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="sourceType != null">
+        #{sourceType,jdbcType=VARCHAR},
+      </if>
+      <if test="sourceTopic != null">
+        #{sourceTopic,jdbcType=VARCHAR},
+      </if>
+      <if test="riskType != null">
+        #{riskType,jdbcType=VARCHAR},
+      </if>
+      <if test="postType != null">
+        #{postType,jdbcType=VARCHAR},
+      </if>
+      <if test="workFlow != null">
+        #{workFlow,jdbcType=VARCHAR},
+      </if>
+      <if test="reasonAnalysis != null">
+        #{reasonAnalysis,jdbcType=VARCHAR},
+      </if>
+      <if test="manageType != null">
+        #{manageType,jdbcType=VARCHAR},
+      </if>
+      <if test="gradingStandard != null">
+        #{gradingStandard,jdbcType=VARCHAR},
+      </if>
+      <if test="treatmentMeasure != null">
+        #{treatmentMeasure,jdbcType=VARCHAR},
+      </if>
+      <if test="respUnit != null">
+        #{respUnit,jdbcType=VARCHAR},
+      </if>
+      <if test="resourceRequirements != null">
+        #{resourceRequirements,jdbcType=VARCHAR},
+      </if>
+      <if test="rectificationPeriod != null">
+        #{rectificationPeriod,jdbcType=VARCHAR},
+      </if>
+      <if test="implementationMeasures != null">
+        #{implementationMeasures,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=DECIMAL},
+      </if>
+      <if test="creator != null">
+        #{creator,jdbcType=CHAR},
+      </if>
+      <if test="creationDate != null">
+        #{creationDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="modifier != null">
+        #{modifier,jdbcType=CHAR},
+      </if>
+      <if test="modifyDate != null">
+        #{modifyDate,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.fujitsu.caac.framework.persistence.bean.XJRiskBean">
+    update T_XJ_RISK
+    <set>
+      <if test="title != null">
+        TITLE = #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="sourceType != null">
+        SOURCE_TYPE = #{sourceType,jdbcType=VARCHAR},
+      </if>
+      <if test="sourceTopic != null">
+        SOURCE_TOPIC = #{sourceTopic,jdbcType=VARCHAR},
+      </if>
+      <if test="riskType != null">
+        RISK_TYPE = #{riskType,jdbcType=VARCHAR},
+      </if>
+      <if test="postType != null">
+        POST_TYPE = #{postType,jdbcType=VARCHAR},
+      </if>
+      <if test="workFlow != null">
+        WORK_FLOW = #{workFlow,jdbcType=VARCHAR},
+      </if>
+      <if test="reasonAnalysis != null">
+        REASON_ANALYSIS = #{reasonAnalysis,jdbcType=VARCHAR},
+      </if>
+      <if test="manageType != null">
+        MANAGE_TYPE = #{manageType,jdbcType=VARCHAR},
+      </if>
+      <if test="gradingStandard != null">
+        GRADING_STANDARD = #{gradingStandard,jdbcType=VARCHAR},
+      </if>
+      <if test="treatmentMeasure != null">
+        TREATMENT_MEASURE = #{treatmentMeasure,jdbcType=VARCHAR},
+      </if>
+      <if test="respUnit != null">
+        RESP_UNIT = #{respUnit,jdbcType=VARCHAR},
+      </if>
+      <if test="resourceRequirements != null">
+        RESOURCE_REQUIREMENTS = #{resourceRequirements,jdbcType=VARCHAR},
+      </if>
+      <if test="rectificationPeriod != null">
+        RECTIFICATION_PERIOD = #{rectificationPeriod,jdbcType=VARCHAR},
+      </if>
+      <if test="implementationMeasures != null">
+        IMPLEMENTATION_MEASURES = #{implementationMeasures,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        STATUS = #{status,jdbcType=DECIMAL},
+      </if>
+      <if test="creator != null">
+        CREATOR = #{creator,jdbcType=CHAR},
+      </if>
+      <if test="creationDate != null">
+        CREATION_DATE = #{creationDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="modifier != null">
+        MODIFIER = #{modifier,jdbcType=CHAR},
+      </if>
+      <if test="modifyDate != null">
+        MODIFY_DATE = #{modifyDate,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where ID = #{id,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.fujitsu.caac.framework.persistence.bean.XJRiskBean">
+    update T_XJ_RISK
+    set TITLE = #{title,jdbcType=VARCHAR},
+      SOURCE_TYPE = #{sourceType,jdbcType=VARCHAR},
+      SOURCE_TOPIC = #{sourceTopic,jdbcType=VARCHAR},
+      RISK_TYPE = #{riskType,jdbcType=VARCHAR},
+      POST_TYPE = #{postType,jdbcType=VARCHAR},
+      WORK_FLOW = #{workFlow,jdbcType=VARCHAR},
+      REASON_ANALYSIS = #{reasonAnalysis,jdbcType=VARCHAR},
+      MANAGE_TYPE = #{manageType,jdbcType=VARCHAR},
+      GRADING_STANDARD = #{gradingStandard,jdbcType=VARCHAR},
+      TREATMENT_MEASURE = #{treatmentMeasure,jdbcType=VARCHAR},
+      RESP_UNIT = #{respUnit,jdbcType=VARCHAR},
+      RESOURCE_REQUIREMENTS = #{resourceRequirements,jdbcType=VARCHAR},
+      RECTIFICATION_PERIOD = #{rectificationPeriod,jdbcType=VARCHAR},
+      IMPLEMENTATION_MEASURES = #{implementationMeasures,jdbcType=VARCHAR},
+      STATUS = #{status,jdbcType=DECIMAL},
+      CREATOR = #{creator,jdbcType=CHAR},
+      CREATION_DATE = #{creationDate,jdbcType=TIMESTAMP},
+      MODIFIER = #{modifier,jdbcType=CHAR},
+      MODIFY_DATE = #{modifyDate,jdbcType=TIMESTAMP}
+    where ID = #{id,jdbcType=VARCHAR}
+  </update>
+</mapper>

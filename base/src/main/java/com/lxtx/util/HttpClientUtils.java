@@ -1,11 +1,11 @@
 package com.lxtx.util;
-
+/*
 import com.arronlong.httpclientutil.HttpClientUtil;
 import com.arronlong.httpclientutil.builder.HCB;
 import com.arronlong.httpclientutil.common.HttpConfig;
 import com.arronlong.httpclientutil.common.HttpResult;
 import com.arronlong.httpclientutil.common.SSLs;
-import com.arronlong.httpclientutil.exception.HttpProcessException;
+import com.arronlong.httpclientutil.exception.HttpProcessException;*/
 import org.apache.commons.lang3.StringUtils;
 
 import java.io.UnsupportedEncodingException;
@@ -19,7 +19,7 @@ import java.util.Map;
  */
 public class HttpClientUtils {
 
-    public static String post(String url,Map<String,Object> map){
+   /* public static String post(String url,Map<String,Object> map){
         String result="";
         String json = GsonUtil.mapToJson(map);
         //插件式配置生成HttpClient时所需参数（超时、连接池、ssl、重试）
@@ -52,12 +52,12 @@ public class HttpClientUtils {
     }
 
 
-    /**
+    *//**
      * 获取HttpResult 对象
      * @param url
      * @param map
      * @return
-     */
+     *//*
     public static HttpResult sendAndGetResp(String url,Map<String,Object> map){
         HttpResult result=null;
         String json = GsonUtil.mapToJson(map);
@@ -91,11 +91,11 @@ public class HttpClientUtils {
     }
 
 
-    /**
+    *//**
      * get 方式访问页面数据
      * @param url
      * @return
-     */
+     *//*
     public static String get(String url){
         String result = null;
         try {
@@ -106,7 +106,7 @@ public class HttpClientUtils {
         }finally {
             return result;
         }
-    }
+    }*/
 
     /**
      * 解析url 参数

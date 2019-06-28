@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fujitsu.caac.framework.service.XJRiskTraceBeanMapper">
+  <resultMap id="BaseResultMap" type="com.fujitsu.caac.framework.persistence.bean.XJRiskTraceBean">
+    <id column="TRACE_ID" jdbcType="VARCHAR" property="traceId" />
+    <result column="RISK_ID" jdbcType="VARCHAR" property="riskId" />
+    <result column="RISK_STATUS" jdbcType="DECIMAL" property="riskStatus" />
+    <result column="CREATOR" jdbcType="CHAR" property="creator" />
+    <result column="CREATION_DATE" jdbcType="TIMESTAMP" property="creationDate" />
+    <result column="MODIFIER" jdbcType="CHAR" property="modifier" />
+    <result column="MODIFY_DATE" jdbcType="TIMESTAMP" property="modifyDate" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    TRACE_ID, RISK_ID, RISK_STATUS, CREATOR, CREATION_DATE, MODIFIER, MODIFY_DATE
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from T_XJ_RISK_TRACE
+    where TRACE_ID = #{traceId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from T_XJ_RISK_TRACE
+    where TRACE_ID = #{traceId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.fujitsu.caac.framework.persistence.bean.XJRiskTraceBean">
+    insert into T_XJ_RISK_TRACE (TRACE_ID, RISK_ID, RISK_STATUS, 
+      CREATOR, CREATION_DATE, MODIFIER, 
+      MODIFY_DATE)
+    values (#{traceId,jdbcType=VARCHAR}, #{riskId,jdbcType=VARCHAR}, #{riskStatus,jdbcType=DECIMAL}, 
+      #{creator,jdbcType=CHAR}, #{creationDate,jdbcType=TIMESTAMP}, #{modifier,jdbcType=CHAR}, 
+      #{modifyDate,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.fujitsu.caac.framework.persistence.bean.XJRiskTraceBean">
+    insert into T_XJ_RISK_TRACE
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="traceId != null">
+        TRACE_ID,
+      </if>
+      <if test="riskId != null">
+        RISK_ID,
+      </if>
+      <if test="riskStatus != null">
+        RISK_STATUS,
+      </if>
+      <if test="creator != null">
+        CREATOR,
+      </if>
+      <if test="creationDate != null">
+        CREATION_DATE,
+      </if>
+      <if test="modifier != null">
+        MODIFIER,
+      </if>
+      <if test="modifyDate != null">
+        MODIFY_DATE,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="traceId != null">
+        #{traceId,jdbcType=VARCHAR},
+      </if>
+      <if test="riskId != null">
+        #{riskId,jdbcType=VARCHAR},
+      </if>
+      <if test="riskStatus != null">
+        #{riskStatus,jdbcType=DECIMAL},
+      </if>
+      <if test="creator != null">
+        #{creator,jdbcType=CHAR},
+      </if>
+      <if test="creationDate != null">
+        #{creationDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="modifier != null">
+        #{modifier,jdbcType=CHAR},
+      </if>
+      <if test="modifyDate != null">
+        #{modifyDate,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.fujitsu.caac.framework.persistence.bean.XJRiskTraceBean">
+    update T_XJ_RISK_TRACE
+    <set>
+      <if test="riskId != null">
+        RISK_ID = #{riskId,jdbcType=VARCHAR},
+      </if>
+      <if test="riskStatus != null">
+        RISK_STATUS = #{riskStatus,jdbcType=DECIMAL},
+      </if>
+      <if test="creator != null">
+        CREATOR = #{creator,jdbcType=CHAR},
+      </if>
+      <if test="creationDate != null">
+        CREATION_DATE = #{creationDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="modifier != null">
+        MODIFIER = #{modifier,jdbcType=CHAR},
+      </if>
+      <if test="modifyDate != null">
+        MODIFY_DATE = #{modifyDate,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where TRACE_ID = #{traceId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.fujitsu.caac.framework.persistence.bean.XJRiskTraceBean">
+    update T_XJ_RISK_TRACE
+    set RISK_ID = #{riskId,jdbcType=VARCHAR},
+      RISK_STATUS = #{riskStatus,jdbcType=DECIMAL},
+      CREATOR = #{creator,jdbcType=CHAR},
+      CREATION_DATE = #{creationDate,jdbcType=TIMESTAMP},
+      MODIFIER = #{modifier,jdbcType=CHAR},
+      MODIFY_DATE = #{modifyDate,jdbcType=TIMESTAMP}
+    where TRACE_ID = #{traceId,jdbcType=VARCHAR}
+  </update>
+</mapper>
