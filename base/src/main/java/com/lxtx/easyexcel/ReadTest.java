@@ -2,7 +2,7 @@ package com.lxtx.easyexcel;
 
 import com.alibaba.excel.ExcelReader;
 import com.alibaba.excel.metadata.Sheet;
-import org.junit.Test;
+//import org.junit.Test;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -10,12 +10,15 @@ import java.util.List;
 
 public class ReadTest {
 
+/*
 
-    /**
+    */
+/**
      * 07版本excel读数据量少于1千行数据，内部采用回调方法.
      *
      * @throws IOException 简单抛出异常，真实环境需要catch异常,同时在finally中关闭流
-     */
+     *//*
+
     @Test
     public void simpleReadListStringV2007() throws IOException {
         InputStream inputStream = FileUtil.getResourcesFileInputStream("2007.xlsx");
@@ -25,11 +28,13 @@ public class ReadTest {
     }
 
 
-    /**
+    */
+/**
      * 07版本excel读数据量少于1千行数据自动转成javamodel，内部采用回调方法.
      *
      * @throws IOException 简单抛出异常，真实环境需要catch异常,同时在finally中关闭流
-     */
+     *//*
+
     @Test
     public void simpleReadJavaModelV2007() throws IOException {
         InputStream inputStream = FileUtil.getResourcesFileInputStream("2007.xlsx");
@@ -38,11 +43,13 @@ public class ReadTest {
         print(data);
     }
 
-    /**
+    */
+/**
      * 07版本excel读数据量大于1千行，内部采用回调方法.
      *
      * @throws IOException 简单抛出异常，真实环境需要catch异常,同时在finally中关闭流
-     */
+     *//*
+
     @Test
     public void saxReadListStringV2007() throws IOException {
         InputStream inputStream = FileUtil.getResourcesFileInputStream("2007.xlsx");
@@ -51,11 +58,13 @@ public class ReadTest {
         inputStream.close();
 
     }
-    /**
+    */
+/**
      * 07版本excel读数据量大于1千行，内部采用回调方法.
      *
      * @throws IOException 简单抛出异常，真实环境需要catch异常,同时在finally中关闭流
-     */
+     *//*
+
     @Test
     public void saxReadJavaModelV2007() throws IOException {
         InputStream inputStream = FileUtil.getResourcesFileInputStream("2007.xlsx");
@@ -64,11 +73,13 @@ public class ReadTest {
         inputStream.close();
     }
 
-    /**
+    */
+/**
      * 07版本excel读取sheet
      *
      * @throws IOException 简单抛出异常，真实环境需要catch异常,同时在finally中关闭流
-     */
+     *//*
+
     @Test
     public void saxReadSheetsV2007() throws IOException {
         InputStream inputStream = FileUtil.getResourcesFileInputStream("2007.xlsx");
@@ -95,11 +106,13 @@ public class ReadTest {
 
 
 
-    /**
+    */
+/**
      * 03版本excel读数据量少于1千行数据，内部采用回调方法.
      *
      * @throws IOException 简单抛出异常，真实环境需要catch异常,同时在finally中关闭流
-     */
+     *//*
+
     @Test
     public void simpleReadListStringV2003() throws IOException {
         InputStream inputStream = FileUtil.getResourcesFileInputStream("2003.xls");
@@ -108,11 +121,13 @@ public class ReadTest {
         print(data);
     }
 
-    /**
+    */
+/**
      * 03版本excel读数据量少于1千行数据转成javamodel，内部采用回调方法.
      *
      * @throws IOException 简单抛出异常，真实环境需要catch异常,同时在finally中关闭流
-     */
+     *//*
+
     @Test
     public void simpleReadJavaModelV2003() throws IOException {
         InputStream inputStream = FileUtil.getResourcesFileInputStream("2003.xls");
@@ -121,11 +136,13 @@ public class ReadTest {
         print(data);
     }
 
-    /**
+    */
+/**
      * 03版本excel读数据量大于1千行数据，内部采用回调方法.
      *
      * @throws IOException 简单抛出异常，真实环境需要catch异常,同时在finally中关闭流
-     */
+     *//*
+
     @Test
     public void saxReadListStringV2003() throws IOException {
         InputStream inputStream = FileUtil.getResourcesFileInputStream("2003.xls");
@@ -134,11 +151,13 @@ public class ReadTest {
         inputStream.close();
     }
 
-    /**
+    */
+/**
      * 03版本excel读数据量大于1千行数据转成javamodel，内部采用回调方法.
      *
      * @throws IOException 简单抛出异常，真实环境需要catch异常,同时在finally中关闭流
-     */
+     *//*
+
     @Test
     public void saxReadJavaModelV2003() throws IOException {
         InputStream inputStream = FileUtil.getResourcesFileInputStream("2003.xls");
@@ -147,11 +166,13 @@ public class ReadTest {
         inputStream.close();
     }
 
-    /**
+    */
+/**
      * 00版本excel读取sheet
      *
      * @throws IOException 简单抛出异常，真实环境需要catch异常,同时在finally中关闭流
-     */
+     *//*
+
     @Test
     public void saxReadSheetsV2003() throws IOException {
         InputStream inputStream = FileUtil.getResourcesFileInputStream("2003.xls");
@@ -179,5 +200,6 @@ public class ReadTest {
             System.out.println(ob);
         }
     }
+*/
 
 }
