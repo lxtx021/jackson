@@ -1,4 +1,4 @@
-package com.jackson.springboot1.controller;
+package com.jackson.lxtx.controller;
 
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.RequestMapping;

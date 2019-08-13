@@ -1,6 +1,6 @@
-package com.jackson.springboot1.controller;
+package com.jackson.lxtx.controller;
 
-import com.jackson.springboot1.model.User;
+import com.jackson.lxtx.model.User;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;

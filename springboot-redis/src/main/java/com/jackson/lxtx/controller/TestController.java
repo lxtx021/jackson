@@ -1,7 +1,7 @@
-package com.jackson.springboot1.controller;
+package com.jackson.lxtx.controller;
 
 import com.alibaba.fastjson.JSONObject;
-import com.jackson.springboot1.model.User;
+import com.jackson.lxtx.model.User;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

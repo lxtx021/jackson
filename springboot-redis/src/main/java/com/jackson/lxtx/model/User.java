@@ -1,4 +1,4 @@
-package com.jackson.springboot1.model;
+package com.jackson.lxtx.model;
 
 import lombok.Getter;
 import lombok.Setter;

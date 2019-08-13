@@ -1,6 +1,6 @@
-package com.jackson.springboot1.controller;
+package com.jackson.lxtx.controller;
 
-import com.jackson.springboot1.service.RedisService;
+import com.jackson.lxtx.service.RedisService;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;

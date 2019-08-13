@@ -1,6 +1,6 @@
-package com.jackson.springboot1.service.impl;
+package com.jackson.lxtx.service.impl;
 
-import com.jackson.springboot1.service.RedisService;
+import com.jackson.lxtx.service.RedisService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;

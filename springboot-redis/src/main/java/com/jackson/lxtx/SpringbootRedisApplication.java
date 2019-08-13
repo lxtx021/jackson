@@ -1,4 +1,4 @@
-package com.jackson.springboot1;
+package com.jackson.lxtx;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -18,10 +18,10 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @SpringBootApplication
 @Configuration
 @EnableSwagger2
-public class Springboot1Application {
+public class SpringbootRedisApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(Springboot1Application.class, args);
+        SpringApplication.run(SpringbootRedisApplication.class, args);
     }
 
     @Bean

@@ -1,4 +1,4 @@
-package com.jackson.springboot1.config;
+package com.jackson.lxtx.config;
 
 import com.alibaba.fastjson.support.spring.FastJsonRedisSerializer;
 import org.springframework.beans.factory.annotation.Autowired;
