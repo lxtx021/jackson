@@ -2,15 +2,11 @@ package com.jackson.springboot1.controller;
 
 import com.alibaba.fastjson.JSONObject;
 import com.jackson.springboot1.model.User;
-import com.sun.istack.internal.Nullable;
 import io.swagger.annotations.ApiOperation;
-import org.springframework.beans.BeanWrapperImpl;
-import org.springframework.util.ReflectionUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.swing.plaf.basic.BasicColorChooserUI;
 import java.beans.PropertyDescriptor;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
