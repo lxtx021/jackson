@@ -30,6 +30,13 @@ public class RedisTestController {
     }
 
 
+    @ApiOperation(value = "redis 测试object set")
+    @RequestMapping("/redistest1")
+    public void test(){
+        redisService.test1();
+    }
+
+
     /**
      * 添加、获取LIST
      */

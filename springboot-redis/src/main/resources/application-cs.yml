@@ -13,10 +13,10 @@ spring:
     show-sql: true
 
   redis:
-    host: 192.168.204.40
+    host: 192.168.204.59
     port: 6379
     # Redis数据库索引（默认为0）
-    database: 0
+    database: 2
     jedis:
       pool:
         #连接池最大连接数

@@ -6,4 +6,6 @@ public interface RedisService {
 
     public String getString();
 
+    public String test1();
+
 }
