@@ -24,8 +24,8 @@ public class RedisConfig {
         //RedisSerializer<Object> jsonString = new GenericToStringSerializer<>(Object.class);
         RedisSerializer<Object> jsonString = new FastJsonRedisSerializer<>(Object.class);
         // String 的 key 和 hash 的 key 都采用 String 的序列化方式
-        redisTemplate.setKeySerializer(stringSerializer);
-        redisTemplate.setHashKeySerializer(stringSerializer);
+        redisTemplate.setKeySerializer(new StringRedisSerializer());
+        redisTemplate.setHashKeySerializer(new StringRedisSerializer());
         // value 都采用 fastjson 的序列化方式
         redisTemplate.setValueSerializer(jsonString);
         redisTemplate.setHashValueSerializer(jsonString);
