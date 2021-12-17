@@ -1,0 +1,12 @@
+com\lxtx\rabbitmq\queues\FanoutSender.class
+com\lxtx\rabbitmq\object\ObjectSender.class
+com\lxtx\rabbitmq\TopicRabbitConfig.class
+com\lxtx\rabbitmq\many\NeoSender.class
+com\lxtx\rabbitmq\many\NeoSender2.class
+com\lxtx\rabbitmq\FanoutRabbitConfig.class
+com\lxtx\RabbitMQProducerApplication.class
+com\lxtx\rabbitmq\topics\TopicSender.class
+com\lxtx\rabbitmq\many\NeoReceiver2.class
+com\lxtx\rabbitmq\model\User.class
+com\lxtx\rabbitmq\RabbitConfig.class
+com\lxtx\rabbitmq\many\NeoReceiver1.class

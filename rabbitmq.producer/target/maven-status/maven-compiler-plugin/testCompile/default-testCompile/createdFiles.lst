@@ -1,0 +1,5 @@
+com\lxtx\rabbitmq\FanoutTest.class
+com\lxtx\rabbitmq\ManyTest.class
+com\lxtx\ApplicationTests.class
+com\lxtx\rabbitmq\ObjectTest.class
+com\lxtx\rabbitmq\TopicTest.class

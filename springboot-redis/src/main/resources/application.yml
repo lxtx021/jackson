@@ -31,4 +31,4 @@ spring:
     #连接超时时间(毫秒)
 
     # 无密码可不写
-    # password:
+    password: Adcc4safety!

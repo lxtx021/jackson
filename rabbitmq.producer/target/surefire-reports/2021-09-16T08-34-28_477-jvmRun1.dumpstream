@@ -1,0 +1,70 @@
+# Created at 2021-09-16T08:35:14.784
+TestSet has not finished before stream error has appeared >> initializing exit by non-null configuration: DEFAULT
+java.io.EOFException
+	at java.io.DataInputStream.readInt(DataInputStream.java:392)
+	at org.apache.maven.surefire.booter.MasterProcessCommand.decode(MasterProcessCommand.java:115)
+	at org.apache.maven.surefire.booter.CommandReader$CommandRunnable.run(CommandReader.java:391)
+	at java.lang.Thread.run(Thread.java:748)
+
+
+# Created at 2021-09-16T08:35:16.930
+Unexpected IOException with stream: 2021-09-16 08:35:16.929 ERROR 6188 --- [ntContainer#0-1] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+
+org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection timed out: connect
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:61) ~[spring-rabbit-2.3.10.jar:2.3.10]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:602) ~[spring-rabbit-2.3.10.jar:2.3.10]
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:724) ~[spring-rabbit-2.3.10.jar:2.3.10]
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:252) ~[spring-rabbit-2.3.10.jar:2.3.10]
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:2163) ~[spring-rabbit-2.3.10.jar:2.3.10]
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2136) ~[spring-rabbit-2.3.10.jar:2.3.10]
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2116) ~[spring-rabbit-2.3.10.jar:2.3.10]
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueInfo(RabbitAdmin.java:407) ~[spring-rabbit-2.3.10.jar:2.3.10]
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueProperties(RabbitAdmin.java:391) ~[spring-rabbit-2.3.10.jar:2.3.10]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.attemptDeclarations(AbstractMessageListenerContainer.java:1914) ~[spring-rabbit-2.3.10.jar:2.3.10]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.redeclareElementsIfNecessary(AbstractMessageListenerContainer.java:1895) ~[spring-rabbit-2.3.10.jar:2.3.10]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.initialize(SimpleMessageListenerContainer.java:1347) [spring-rabbit-2.3.10.jar:2.3.10]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1193) [spring-rabbit-2.3.10.jar:2.3.10]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_221]
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_221]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_221]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_221]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_221]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_221]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_221]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_221]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_221]
+	at com.rabbitmq.client.impl.SocketFrameHandlerFactory.create(SocketFrameHandlerFactory.java:60) ~[amqp-client-5.12.0.jar:5.12.0]
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1220) ~[amqp-client-5.12.0.jar:5.12.0]
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1170) ~[amqp-client-5.12.0.jar:5.12.0]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connectAddresses(AbstractConnectionFactory.java:640) ~[spring-rabbit-2.3.10.jar:2.3.10]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:615) ~[spring-rabbit-2.3.10.jar:2.3.10]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:565) ~[spring-rabbit-2.3.10.jar:2.3.10]
+	... 12 common frames omitted
+
+
+
+# Created at 2021-09-16T08:35:16.935
+Unexpected IOException with stream: 2021-09-16 08:35:16.935  INFO 6188 --- [ntContainer#0-1] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [192.168.206.56:5672]
+
+
+# Created at 2021-09-16T08:35:37.967
+Unexpected IOException with stream: 2021-09-16 08:35:37.966  INFO 6188 --- [           main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [192.168.206.56:5672]
+
+
+# Created at 2021-09-16T08:35:43.109
+Unexpected IOException with stream: 2021-09-16 08:35:43.108  WARN 6188 --- [ntContainer#0-1] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection timed out: connect
+
+
+# Created at 2021-09-16T08:35:43.112
+Unexpected IOException with stream: 2021-09-16 08:35:43.112  INFO 6188 --- [ntContainer#0-1] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@e8fadb0: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+
+
+# Created at 2021-09-16T08:35:58.997
+Unexpected IOException with stream: 2021-09-16 08:35:58.996  INFO 6188 --- [           main] o.s.a.r.l.SimpleMessageListenerContainer : Broker not available; cannot force queue declarations during start: java.net.ConnectException: Connection timed out: connect
+
+
+# Created at 2021-09-16T08:35:58.998
+Unexpected IOException with stream: 2021-09-16 08:35:58.996  INFO 6188 --- [ntContainer#0-2] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [192.168.206.56:5672]
+
+

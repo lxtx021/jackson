@@ -2,11 +2,16 @@ package com.jackson.lxtx.service.impl;
 
 import com.jackson.lxtx.service.RedisService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataAccessException;
+import org.springframework.data.redis.connection.RedisConnection;
+import org.springframework.data.redis.connection.StringRedisConnection;
+import org.springframework.data.redis.core.RedisCallback;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 import java.util.TimeZone;
 
@@ -98,4 +103,20 @@ public class RedisServiceImpl implements RedisService {
 //    System.out.println(new Timestamp(yesterday));//昨天这一时间点
 //    System.out.println(new Timestamp(zero));//今天零点零分零秒
 //    System.out.println(new Timestamp(twelve));//今天23点59分59秒
+
+    public List<Object> batchGet(List<String> keys){
+        List<Object> result= redisTemplate.executePipelined(new RedisCallback<String>() {
+            @Override
+            public String doInRedis(RedisConnection connection) throws DataAccessException {
+                StringRedisConnection src =(StringRedisConnection)connection;
+                src.get("12");
+                src.set("12","12");
+                for (String key :keys) {
+                    src.get(key);
+                }
+                return null;
+            }
+        });
+        return result;
+    }
 }

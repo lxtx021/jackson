@@ -1,0 +1,47 @@
+spring:
+  #  profiles:
+  #    active: dev
+  application:
+    name: es-demo
+  elasticsearch:
+      rest:
+        uris: http://192.168.204.40:9200,http://192.168.204.41:9200,http://192.168.204.75:9200
+  datasource:
+    username: root
+    password: Adcc4safety!
+    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+server:
+  port: 9080
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.sun.demo.entity
+  configuration:
+    map-underscore-to-camel-case: true
+
+# Logger Config
+logging:
+  level:
+    com.baomidou.mybatisplus.samples: debug
+    com.example.mybatisdemo: debug
+
+#============================================================================
+# Elasticsearch-核心配置
+#============================================================================
+elasticsearch:
+# http连接超时时间
+  connectTimeout: 1000
+# socket连接超时时间
+  socketTimeout: 30000
+# 获取连接的超时时间
+  connectionRequestTimeout: 500
+# 最大连接数
+  maxConnTotal: 100
+# 最大路由连接数
+  maxConnPerRoute: 100
+# 任务最长可执行时间 (单位:小时)
+  executeTimeout: 8
+  username: esuser
+  password:
+#原文链接：https://blog.csdn.net/miaomiao19971215/article/details/105106783
