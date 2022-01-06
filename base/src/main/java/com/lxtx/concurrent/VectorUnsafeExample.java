@@ -5,7 +5,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 /**
- * @author 孙洪波
+ * @author jackson
  * @version 1.0
  * @description 著作权归https://pdai.tech所有。
  * 链接：https://www.pdai.tech/md/java/thread/java-thread-x-theorty.html

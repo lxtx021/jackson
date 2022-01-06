@@ -1,7 +1,7 @@
 package com.lxtx.base.collection;
 
 /**
- * @author 孙洪波
+ * @author jackson
  * @version 1.0
  * @description
  * Java中的String类提供了支持正则表达式操作的方法，包括：matches()、replaceAll()、replaceFirst()、split()。

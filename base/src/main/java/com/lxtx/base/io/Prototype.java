@@ -7,7 +7,7 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 /**
- * @author 孙洪波
+ * @author jackson
  * @version 1.0
  * @description:
  * @date 2020/12/29 9:16

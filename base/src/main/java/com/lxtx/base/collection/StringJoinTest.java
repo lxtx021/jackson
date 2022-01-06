@@ -3,7 +3,7 @@ package com.lxtx.base.collection;
 import java.util.StringJoiner;
 
 /**
- * @author 孙洪波
+ * @author jackson
  * @version 1.0
  * @description
  * @date 2020/11/18

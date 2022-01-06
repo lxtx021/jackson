@@ -3,7 +3,7 @@ package com.lxtx.thread;
 import java.util.concurrent.CountDownLatch;
 
 /**
- * @author 孙洪波
+ * @author jackson
  * @version 1.0
  * @description CountDownLatch
  * 解释：

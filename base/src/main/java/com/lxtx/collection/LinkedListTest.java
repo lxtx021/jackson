@@ -3,7 +3,7 @@ package com.lxtx.collection;
 import java.util.LinkedList;
 
 /**
- * @author 孙洪波
+ * @author jackson
  * @version 1.0
  * @description
  * @date 2020/8/21

@@ -1,7 +1,7 @@
 package com.lxtx.base.utils;
 
 /**
- * @author 孙洪波
+ * @author jackson
  * @version 1.0
  * @description 可实现的全局唯一有序ID生成策略
  * https://blog.csdn.net/sinat_27535209/article/details/102740660

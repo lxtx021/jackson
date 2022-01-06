@@ -3,7 +3,7 @@ package com.lxtx.thread;
 import java.util.concurrent.Semaphore;
 
 /**
- * @author 孙洪波
+ * @author jackson
  * @version 1.0
  * @description Semaphore
  * Semaphore英文的字面意思是信号量。它的工作机制是每个线程想要获取运行的机会的话，都必须获取到信号量。acquire()方法阻塞的获取信号量，release()释放信号量。

@@ -3,7 +3,7 @@ import java.lang.management.ManagementFactory;
 import java.net.InetAddress;
 import java.net.NetworkInterface;
 /**
- * @author 孙洪波
+ * @author jackson
  * @version 1.0
  * @description Java分布式自增长ID实现方案
  * https://www.cnblogs.com/light-zhang/p/8359144.html

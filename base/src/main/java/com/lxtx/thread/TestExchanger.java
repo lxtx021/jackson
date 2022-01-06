@@ -3,7 +3,7 @@ package com.lxtx.thread;
 import java.util.concurrent.Exchanger;
 
 /**
- * @author 孙洪波
+ * @author jackson
  * @version 1.0
  * @description Exchanger
  * Exchanger提供了让两个线程互相交换数据的同步点。Exchanger有点像2个线程的CyclicBarrier，线程之间都是互相等待，区别在于Exchanger多了交换的操作。
