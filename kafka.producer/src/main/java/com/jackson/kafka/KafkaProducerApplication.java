@@ -21,7 +21,7 @@ public class KafkaProducerApplication {
 		ConfigurableApplicationContext context = SpringApplication.run(KafkaProducerApplication.class, args);
 		KafkaSender sender = context.getBean(KafkaSender.class);
 
-		for (int i = 0; i < 10000; i++) {
+		for (int i = 0; i < 100000; i++) {
 			//调用消息发送类中的消息发送方法
 			sender.send();
 			try {

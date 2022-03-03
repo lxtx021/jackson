@@ -17,7 +17,8 @@
         <module>rabbitmq.demo</module>
         <module>springboot-hadoop</module>
 		<module>mongodb</module>
-	</modules>
+        <module>file-server</module>
+    </modules>
 	<packaging>pom</packaging>
 
 	<name>jackson</name>
