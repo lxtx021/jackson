@@ -18,6 +18,7 @@
         <module>springboot-hadoop</module>
 		<module>mongodb</module>
         <module>file-server</module>
+        <module>activemq</module>
     </modules>
 	<packaging>pom</packaging>
 

@@ -1,0 +1,19 @@
+server:
+  port: 8888
+spring:
+  activemq:
+    broker-url: tcp://192.168.204.240:61616?jms.prefetchPolicy.queuePrefetch=10
+    in-memory: false
+    user: admin
+    password: admin
+    pool:
+      enabled: false       #连接池启动
+      max-connections: 10 #最大连接数
+      idle-timeout: 30000
+  jms:
+    pub-sub-domain: false # 默认为 false:queue   true:topic
+    listener:
+      concurrency: 10
+      max-concurrency: 20
+queue: Q.ADSB.DOWN # 点对点消费名字
+topic: Q.ADSB.DOWN # 订阅式消费名字
